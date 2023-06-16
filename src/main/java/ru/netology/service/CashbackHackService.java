@@ -4,12 +4,6 @@ public class CashbackHackService {
     private final int boundary = 1000;
 
     public int remain(int amount) {
-        if (amount == 0) {
-            return boundary;
-        } else if (amount % boundary == 0) {
-            return 0;
-        } else {
-            return boundary - amount % boundary;
-        }
+        return boundary - amount % boundary;
     }
 }
