@@ -10,7 +10,7 @@ public class CashbackHackServiceTest {
     public void remainIfBelowBoundary() {
         CashbackHackService service = new CashbackHackService();
 
-        assertEquals(service.remain(900), 100);
+        assertEquals(service.remain(999), 1);
     }
 
     @Test
@@ -31,6 +31,6 @@ public class CashbackHackServiceTest {
     public void remainIfAboveBoundary() {
         CashbackHackService service = new CashbackHackService();
 
-        assertEquals(service.remain(1567), 433);
+        assertEquals(service.remain(1001), 999);
     }
 }
